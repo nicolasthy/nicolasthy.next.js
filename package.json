@@ -1,0 +1,20 @@
+{
+    "name": "nicolasthy.next.js",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@emotion/core": "^10.0.27",
+        "gray-matter": "^4.0.2",
+        "next": "^9.1.7",
+        "raw-loader": "^4.0.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-markdown": "^4.3.1"
+    },
+    "scripts": {
+        "dev": "next src",
+        "start": "next build src",
+        "build": "next start src"
+    }
+}
