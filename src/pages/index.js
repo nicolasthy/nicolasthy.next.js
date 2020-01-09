@@ -1,6 +1,5 @@
 ﻿import Link from "next/link";
 
-import Layout from "../components/Layout";
 import PostsList from "../components/posts/PostsList";
 
 import { getPosts } from "../data/Posts";
@@ -8,12 +7,12 @@ import { getPosts } from "../data/Posts";
 const HomePage = props => {
     console.log(props.posts);
     return (
-        <Layout>
+        <>
             <PostsList posts={props.posts} />
-            <Link href="post" as="posts">
+            <Link href="/posts" as="posts">
                 <a>View all</a>
             </Link>
-        </Layout>
+        </>
     );
 };
 

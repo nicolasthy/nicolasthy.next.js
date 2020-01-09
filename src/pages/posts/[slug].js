@@ -4,11 +4,9 @@ import Head from "next/head";
 import { siteMetadata } from "../../config/site-config";
 import { getPostBySlug } from "../../data/Posts";
 
-import Layout from "../../components/Layout";
-
 const Post = ({ post }) => {
     return (
-        <Layout>
+        <>
             <Head>
                 <title>
                     {post.data.title} - {siteMetadata.title}
@@ -17,7 +15,7 @@ const Post = ({ post }) => {
             </Head>
             <h1>{post.data.title}</h1>
             <ReactMarkdown source={post.content} />
-        </Layout>
+        </>
     );
 };
 
