@@ -5,6 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "@emotion/core": "^10.0.27",
+        "@emotion/styled": "^10.0.27",
         "emotion-theming": "^10.0.27",
         "gray-matter": "^4.0.2",
         "next": "^9.1.7",

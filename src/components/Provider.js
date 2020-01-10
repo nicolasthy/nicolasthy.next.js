@@ -6,13 +6,21 @@ import Layout from "./Layout";
 const themeLight = {
     text: "#191716",
     background: "#F7F7FF",
-    link: "#424140"
+    link: "#424140",
+    posts: {
+        item: "#F7F8F8",
+        itemHover: "#FFFFFF"
+    }
 };
 
 const themeDark = {
     text: "#F7F7FF",
     background: "#191716",
-    link: "rgba(255,255,255, 0.7)"
+    link: "rgba(255,255,255, 0.7)",
+    posts: {
+        item: "#000000",
+        itemHover: "#000000"
+    }
 };
 
 let prefersDarkMode;
