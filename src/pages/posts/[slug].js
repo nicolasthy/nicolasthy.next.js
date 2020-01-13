@@ -1,31 +1,53 @@
-﻿import ReactMarkdown from "react-markdown";
+﻿/** @jsx jsx */
+import { css, jsx } from "@emotion/core";
+import { useTheme } from "emotion-theming";
+
+import ReactMarkdown from "react-markdown";
 import Head from "next/head";
 
 import { siteMetadata } from "../../config/site-config";
 import { getPostBySlug } from "../../data/Posts";
 
 const Post = ({ post }) => {
-    return (
-        <>
-            <Head>
-                <title>
-                    {post.data.title} - {siteMetadata.title}
-                </title>
-                <meta name="description" content={post.excerpt} />
-            </Head>
-            <h1>{post.data.title}</h1>
-            <ReactMarkdown source={post.content} />
-        </>
-    );
+  const theme = useTheme();
+
+  return (
+    <>
+      <Head>
+        <title>
+          {post.data.title} - {siteMetadata.title}
+        </title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
+      <h1
+        css={css`
+          font-size: 52px;
+          font-weight: 700;
+        `}
+      >
+        {post.data.title}
+      </h1>
+      <ReactMarkdown
+        source={post.content}
+        css={css`
+          font-size: 18px;
+          line-height: 2.125;
+          p {
+            color: ${theme.textLight};
+          }
+        `}
+      />
+    </>
+  );
 };
 
 Post.getInitialProps = async function(context) {
-    const { slug } = context.query;
-    const post = await getPostBySlug(slug);
+  const { slug } = context.query;
+  const post = await getPostBySlug(slug);
 
-    return {
-        post
-    };
+  return {
+    post
+  };
 };
 
 export default Post;
