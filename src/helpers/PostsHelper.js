@@ -8,11 +8,15 @@ function getExcerpt(file, options) {
         ) + "...";
 }
 
+function readingTime(text = "") {
+    return Math.ceil(text.split(/s/g).length / 200);
+}
+
 function processMarkdown(value) {
     return matter(value.default, {
         excerpt: getExcerpt,
-        excerptLimit: 255
+        excerptLimit: 150
     });
 }
 
-export { processMarkdown };
+export { processMarkdown, readingTime };

@@ -1,4 +1,4 @@
-﻿import { processMarkdown } from "../helpers/PostsHelper";
+﻿import { processMarkdown, readingTime } from "../helpers/PostsHelper";
 
 function getPosts(count = null) {
     const posts = (context => {
@@ -15,7 +15,8 @@ function getPosts(count = null) {
             const post = processMarkdown(value);
 
             return {
-                post,
+                ...post,
+                readingTime: readingTime(post.content),
                 slug
             };
         });
@@ -23,9 +24,10 @@ function getPosts(count = null) {
         return data;
     })(require.context("../posts", true, /\.md$/));
 
-    return posts.sort(
-        (a, b) => new Date(b.post.data.date) - new Date(a.post.data.date)
-    ).slice(0, count || posts.length);
+    console.log(posts);
+    return posts
+        .sort((a, b) => new Date(b.data.created_at) - new Date(a.data.created_at))
+        .slice(0, count || posts.length);
 }
 
 async function getPostBySlug(slug) {

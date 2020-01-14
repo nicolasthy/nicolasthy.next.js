@@ -7,6 +7,7 @@ import Head from "next/head";
 
 import { siteMetadata } from "../../config/site-config";
 import { getPostBySlug } from "../../data/Posts";
+import SyntaxHighlight from "../../components/SyntaxHighlight";
 
 const Post = ({ post }) => {
   const theme = useTheme();
@@ -29,6 +30,7 @@ const Post = ({ post }) => {
       </h1>
       <ReactMarkdown
         source={post.content}
+        renderers={{ code: SyntaxHighlight }}
         css={css`
           font-size: 18px;
           line-height: 2.125;
