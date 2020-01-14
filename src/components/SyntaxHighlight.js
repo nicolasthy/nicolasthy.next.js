@@ -2,9 +2,9 @@
 import * as themes from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { useTheme } from "emotion-theming";
 
-const SyntaxHighlight = props => {
+const SyntaxHighlight = ({ value, language = null }) => {
     const theme = useTheme();
-    const { value, language = null } = props;
+
     const lines = language.match(/{([^}]+)}/);
     const highlights =
         lines &&
