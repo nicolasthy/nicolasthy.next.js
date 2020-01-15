@@ -15,7 +15,8 @@ const themeLight = {
     itemShadow: "0 1px 2px 0 rgba(5, 7, 26, 0.1)",
     itemHoverShadow: "0 16px 12px -10px rgba(5, 7, 26, 0.1)",
     syntaxHighlightTheme: "githubGist",
-    syntaxLineHighlightBackground: "#FAFAFF"
+    syntaxHighlightBackground: "#FAFAFF",
+    imageShadowOpacity: 0.35
   }
 };
 
@@ -31,7 +32,8 @@ const themeDark = {
     itemShadow: "0 1px 2px 0 rgba(5, 7, 26, 0.2)",
     itemHoverShadow: "0 16px 12px -10px rgba(5, 7, 26, 0.2)",
     syntaxHighlightTheme: "atomOneDark",
-    syntaxLineHighlightBackground: "#191716"
+    syntaxHighlightBackground: "#191716",
+    imageShadowOpacity: 0.05
   }
 };
 

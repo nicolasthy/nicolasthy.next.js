@@ -8,7 +8,7 @@ import Header from "./Header";
 
 const StyledLayout = styled.div`
     width: 100%;
-    max-width: 950px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     font-family: "Lora", serif;
@@ -53,6 +53,13 @@ const Layout = props => {
                 h4,
                 h5 {
                     font-family: "Poppins", sans-serif;
+                }
+                .medium-zoom-overlay {
+                    z-index: 10;
+                    background: ${theme.backgroundTransition} !important;
+                }
+                .medium-zoom-image.medium-zoom-image--opened {
+                    z-index: 15;
                 }
                 .page-transition-enter:after {
                     content: "";

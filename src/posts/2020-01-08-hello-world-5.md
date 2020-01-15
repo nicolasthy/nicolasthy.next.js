@@ -6,9 +6,20 @@ created_at: 2020-01-08 23:00:00 Z
 
 Earlier this year, the concentration of carbon dioxide in the atmosphere reached 400 parts per million (ppm). The last time there was that much CO2 in our atmosphere was three million years ago, when sea levels were 24 meters higher than they are today. Now sea levels are rising again. Last September, Arctic sea ice covered the smallest area ever recorded. All but one of the ten warmest years since 1880, when global records began to be kept, have occurred in the twenty-first century.
 
+## Landscape Images
+
+![Image of Pigalle Basketball court](../static/basket-court-pigalle-studio-architecture-public-leisure-paris-france-_dezeen_hero-b.jpg)
+
+Some climate scientists believe that 400 ppm of CO2 in the atmosphere is already enough to take us past the tipping point at which we risk a climate catastrophe that will turn billions of people into refugees.
+
+![Image of Pigalle Basketball player](../static/nicolas-steave-OA3n9Azqt7I-unsplash.jpg)
+
 Some climate scientists believe that 400 ppm of CO2 in the atmosphere is already enough to take us past the tipping point at which we risk a climate catastrophe that will turn billions of people into refugees. They say that we need to get the amount of atmospheric CO2 back down to 350 ppm. That figure lies behind the name taken by 350.org, a grassroots movement with volunteers in 188 countries trying to solve the problem of climate change.
 
-```javascript{1,4}
+## Javascript Code Highlight
+This is an example of Javascript code highlighting
+
+```JavaScript{1,4}
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
@@ -25,7 +36,10 @@ const SyntaxHighlight = props => {
 export default SyntaxHighlight;
 ```
 
-```html{2}
+## HTML Code Highlight
+This is an example of HTML code highlighting
+
+```HTML{2}
 <span class="status">
     <svg class="status-success-icon iOutputs_checkSmall" ng-show="item.Correction === 1" >
         <use xlink:href="#Outputs_checkSmall"></use>
@@ -34,6 +48,15 @@ export default SyntaxHighlight;
         <use xlink:href="#Outputs_cross"></use>
     </svg>
 </span>
+```
+
+## Ruby Code Highlight
+This is an example of Ruby code highlighting
+
+```Ruby{2}
+File.open("ordinal").grep /d$/ do |line|
+  print line
+end
 ```
 
 Other climate scientists are more optimistic: they argue that if we allow atmospheric CO2 to rise to 450 ppm, a level associated with a two-degree Celsius temperature rise, we have a 66.6% chance of avoiding catastrophe. That still leaves a one-in-three chance of catastrophe – worse odds than playing Russian roulette. And we are forecast to surpass 450 ppm by 2038.
