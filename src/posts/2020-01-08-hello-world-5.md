@@ -8,11 +8,11 @@ Earlier this year, the concentration of carbon dioxide in the atmosphere reached
 
 ## Landscape Images
 
-![Image of Pigalle Basketball court](../static/basket-court-pigalle-studio-architecture-public-leisure-paris-france-_dezeen_hero-b.jpg)
+![Pigalle Basketball court](../static/basket-court-pigalle-studio-architecture-public-leisure-paris-france-_dezeen_hero-b.jpg)
 
 Some climate scientists believe that 400 ppm of CO2 in the atmosphere is already enough to take us past the tipping point at which we risk a climate catastrophe that will turn billions of people into refugees.
 
-![Image of Pigalle Basketball player](../static/nicolas-steave-OA3n9Azqt7I-unsplash.jpg)
+![Pigalle Basketball player](../static/nicolas-steave-OA3n9Azqt7I-unsplash.jpg)
 
 Some climate scientists believe that 400 ppm of CO2 in the atmosphere is already enough to take us past the tipping point at which we risk a climate catastrophe that will turn billions of people into refugees. They say that we need to get the amount of atmospheric CO2 back down to 350 ppm. That figure lies behind the name taken by 350.org, a grassroots movement with volunteers in 188 countries trying to solve the problem of climate change.
 

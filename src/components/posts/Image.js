@@ -12,15 +12,21 @@ const Image = ({ alt, src }) => {
     }, []);
 
     return (
-        <StyledImage theme={theme} style={{ backgroundImage: `url(${src})` }}>
-            <img ref={imageRef} alt={alt} src={src} />
-        </StyledImage>
+        <>
+            <StyledImage
+                theme={theme}
+                style={{ backgroundImage: `url(${src})` }}
+            >
+                <img ref={imageRef} alt={alt} src={src} />
+            </StyledImage>
+            <StyledAlt>{alt}</StyledAlt>
+        </>
     );
 };
 
 const StyledImage = styled.span`
     max-width: 120%;
-    margin: 40px -10% 60px;
+    margin: 40px -10% 20px;
     display: block;
     position: relative;
 
@@ -59,5 +65,14 @@ const StyledImage = styled.span`
         z-index: 1;
     }
 `;
+
+const StyledAlt = styled.span`
+    display: block;
+    text-align: center;
+    margin: 0 0 40px;
+    font-size: 12px;
+    opacity: 0.5;
+    font-family: "Poppins", sans-serif;
+`
 
 export default Image;
