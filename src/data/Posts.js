@@ -24,7 +24,6 @@ function getPosts(count = null) {
         return data;
     })(require.context("../posts", true, /\.md$/));
 
-    console.log(posts);
     return posts
         .sort((a, b) => new Date(b.data.created_at) - new Date(a.data.created_at))
         .slice(0, count || posts.length);

@@ -1,23 +1,43 @@
-﻿import { useRef, useEffect } from "react";
+﻿import { useRef, useEffect, useState } from "react";
 import { useTheme } from "emotion-theming";
 import styled from "@emotion/styled";
 import mediumZoom from "medium-zoom";
 
-const Image = ({ alt, src }) => {
+const PostImage = ({ alt, src }) => {
+    const imagePreloader = src.replace(
+        src.match(/(?:\.([^.]+))?$/)[0],
+        `.min${src.match(/(?:\.([^.]+))?$/)[0]}`
+    );
+
     const theme = useTheme();
     const imageRef = useRef();
+    const [image, setImage] = useState(imagePreloader);
 
     useEffect(() => {
         mediumZoom(imageRef.current);
+
+        const imageFull = new Image();
+        imageFull.onload = () => {
+            setImage(imageFull);
+        }
+        imageFull.src = src;
+
+        return () => {
+            imageFull.onload = null;
+        }
     }, []);
 
     return (
         <>
             <StyledImage
                 theme={theme}
-                style={{ backgroundImage: `url(${src})` }}
+                style={{ 
+                    backgroundImage: `url(${image.src || image})`,
+                    transition: '0.5s filter linear',
+                    filter: `${image.src ? '' : 'blur(25px)'}`,
+                }}
             >
-                <img ref={imageRef} alt={alt} src={src} />
+                <img ref={imageRef} alt={alt} src={image.src || image} />
             </StyledImage>
             <StyledAlt>{alt}</StyledAlt>
         </>
@@ -73,6 +93,6 @@ const StyledAlt = styled.span`
     font-size: 12px;
     opacity: 0.5;
     font-family: "Poppins", sans-serif;
-`
+`;
 
-export default Image;
+export default PostImage;
