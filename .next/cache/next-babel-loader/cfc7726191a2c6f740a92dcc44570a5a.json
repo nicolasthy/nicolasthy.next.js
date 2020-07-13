@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const COLORS = {\n  primary: \"#9B5DE5\",\n  secondary: \"#CFF7B9\",\n  light: \"#F7F7FF\",\n  dark: \"#191716\"\n};\nexport const FONTS = {\n  sansSerif: '\"Poppins\", sans-serif',\n  serif: '\"Lora\", serif'\n};","map":null,"metadata":{},"sourceType":"module"}

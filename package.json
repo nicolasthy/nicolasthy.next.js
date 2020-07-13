@@ -1,27 +1,32 @@
 {
-    "name": "nicolasthy.next.js",
-    "version": "1.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "dependencies": {
-        "@emotion/core": "^10.0.27",
-        "@emotion/styled": "^10.0.27",
-        "copy-to-clipboard": "^3.2.0",
-        "emotion-theming": "^10.0.27",
-        "gray-matter": "^4.0.2",
-        "medium-zoom": "^1.0.5",
-        "next": "^9.1.7",
-        "next-page-transitions": "^1.0.0-beta.2",
-        "raw-loader": "^4.0.0",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-feather": "^2.0.3",
-        "react-markdown": "^4.3.1",
-        "react-syntax-highlighter": "^12.2.1"
-    },
-    "scripts": {
-        "dev": "next src",
-        "start": "next build src",
-        "build": "next start src"
-    }
+  "name": "nicolasthy.next.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "copy-to-clipboard": "^3.2.0",
+    "emotion-theming": "^10.0.27",
+    "gray-matter": "^4.0.2",
+    "medium-zoom": "^1.0.5",
+    "next": "^9.1.7",
+    "next-page-transitions": "^1.0.0-beta.2",
+    "raw-loader": "^4.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-feather": "^2.0.3",
+    "react-markdown": "^4.3.1",
+    "react-syntax-highlighter": "^12.2.1"
+  },
+  "scripts": {
+    "dev": "next src",
+    "start": "next build src",
+    "build": "next start src",
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "rimraf": "^3.0.2"
+  }
 }
