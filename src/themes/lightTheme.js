@@ -16,7 +16,7 @@ export const LIGHT_THEME = {
     activeColor: COLORS.primary,
   },
   posts: {
-    item: "#FAFAFF",
+    item: "#FCFCFF",
     itemHover: "#FFFFFF",
     itemShadow: "0 1px 2px 0 rgba(5, 7, 26, 0.1)",
     itemHoverShadow: "0 16px 12px -10px rgba(5, 7, 26, 0.1)",

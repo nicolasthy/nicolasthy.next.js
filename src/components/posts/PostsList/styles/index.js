@@ -4,20 +4,16 @@ import { FONTS } from "../../../../themes/constants"
 
 const languageHighlightColors = {
   html: {
-    background: "rgba(1, 55, 162, 1)",
-    border: "rgba(1, 55, 162, 1)",
+    background: "#00BBF9",
   },
   css: {
-    background: "rgba(1, 55, 162, 1)",
-    border: "rgba(1, 55, 162, 1)",
+    background: "#00F5D4",
   },
   javascript: {
-    background: "rgba(248, 179, 25, 1)",
-    border: "rgba(248, 179, 25, 1)",
+    background: "#FEE020",
   },
   ruby: {
-    background: "rgba(255, 49, 91, 1)",
-    border: "rgba(255, 49, 91, 1)",
+    background: "#F15BB5",
   },
 }
 
@@ -30,8 +26,8 @@ export const Container = styled.ul`
     background: ${({ theme }) => theme.posts.item};
     box-shadow: ${({ theme }) => theme.posts.itemShadow};
     border-radius: 25px;
-    margin: 20px 0;
-    padding: 25px 25px;
+    margin: 30px 0;
+    padding: 30px 30px;
     transition: background 0.2s linear, box-shadow 0.2s linear;
 
     &:hover {
@@ -47,6 +43,7 @@ export const Container = styled.ul`
 
     p {
       &:first-of-type {
+        font-size: 12px;
         margin: 0 0 5px;
         opacity: 0.7;
       }
