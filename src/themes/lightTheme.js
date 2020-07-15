@@ -24,5 +24,7 @@ export const LIGHT_THEME = {
     syntaxHighlightTheme: "githubGist",
     syntaxHighlightBackground: "#FAFAFF",
     imageShadowOpacity: 0.35,
+    inlineCodeBackground: hex2rgba(COLORS.dark, 0.05),
+    inlineCodeColor: hex2rgba(COLORS.primary, 0.8),
   },
 }

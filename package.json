@@ -20,12 +20,13 @@
     "react-syntax-highlighter": "^12.2.1"
   },
   "scripts": {
-    "dev": "next src",
+    "dev": "next src -p 4000",
     "start": "next build src",
     "build": "next start src",
     "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "devDependencies": {
+    "babel-plugin-transform-define": "^2.0.0",
     "gh-pages": "^3.1.0",
     "rimraf": "^3.0.2"
   }

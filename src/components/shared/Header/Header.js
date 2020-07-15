@@ -25,7 +25,7 @@ const Header = (props) => {
 
   return (
     <Container>
-      <Link href="/">
+      <Link href="/" as={`${process.env.BACKEND_URL}/`}>
         <a>
           <Logo theme={theme}>nt</Logo>
         </a>

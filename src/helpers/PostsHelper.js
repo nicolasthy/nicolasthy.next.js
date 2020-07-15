@@ -1,7 +1,7 @@
 ﻿import matter from "gray-matter";
 
 function getExcerpt(file, options) {
-    file.excerpt =
+    file.excerpt = file.data.excerpt ||
         file.content.substr(
             0,
             file.content.lastIndexOf(" ", options.excerptLimit)

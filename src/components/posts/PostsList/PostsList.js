@@ -6,11 +6,10 @@ const PostsList = ({ posts }) => {
   const theme = useTheme()
 
   const renderPosts = () => {
-    console.log(posts)
     return posts.map((post) => {
       return (
         <React.Fragment key={post.slug}>
-          <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
+          <Link href="/posts/[slug]" as={`${process.env.BACKEND_URL}/posts/${post.slug}`}>
             <li>
               <h3>{post.data.title}</h3>
               <p>

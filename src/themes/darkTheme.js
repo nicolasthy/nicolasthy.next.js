@@ -24,5 +24,7 @@ export const DARK_THEME = {
     syntaxHighlightTheme: "atomOneDark",
     syntaxHighlightBackground: "#191716",
     imageShadowOpacity: 0.05,
+    inlineCodeBackground: hex2rgba(COLORS.light, 0.1),
+    inlineCodeColor: hex2rgba(COLORS.secondary, 0.8),
   },
 }

@@ -8,7 +8,7 @@ import { PostsList } from "../components/posts/PostsList/PostsList"
 
 import { getPosts } from "../data/Posts"
 
-const HomePage = (props) => {
+const HomePage = ({ posts }) => {
   const theme = useTheme()
 
   return (
@@ -25,7 +25,7 @@ const HomePage = (props) => {
       >
         <h2>Writings</h2>
         <StyledArrowLink theme={theme}>
-          <Link href="/posts" as="posts">
+          <Link href="/posts" as={`${process.env.BACKEND_URL}/posts`}>
             <a>
               <span>View all</span>
               <svg width="19" height="12" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const HomePage = (props) => {
           </Link>
         </StyledArrowLink>
       </div>
-      <PostsList posts={props.posts} />
+      <PostsList posts={posts} />
     </>
   )
 }

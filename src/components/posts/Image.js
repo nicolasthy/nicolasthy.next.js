@@ -49,6 +49,7 @@ const StyledImage = styled.span`
     margin: 40px -10% 20px;
     display: block;
     position: relative;
+    border-radius: 4px;
 
     img {
         opacity: 0;
@@ -83,6 +84,7 @@ const StyledImage = styled.span`
 
     &::after {
         z-index: 1;
+        border-radius: 4px;
     }
 `;
 
